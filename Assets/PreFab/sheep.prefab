@@ -742,13 +742,14 @@ MonoBehaviour:
   guionThispet: {fileID: 3905910871279705838}
   CurrentHeath: 0
   TimeToDevEachAge:
-  - 15
   - 20
+  - 25
   SizeEachAge:
   - 0.09
   - 0.14
   - 0.18
-  ValueEachAges: 64000000c800000058020000
+  ValueEachAges: 64000000c201000084030000
+  BuyPrice: 500
 --- !u!1 &653954921942321778
 GameObject:
   m_ObjectHideFlags: 0

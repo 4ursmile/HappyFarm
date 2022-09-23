@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4603164704725570372}
   - component: {fileID: 147925363416551336}
   - component: {fileID: 6588030237484228654}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: StatusAndHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 26, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.2, y: 16.9}
+  m_AnchoredPosition: {x: 0.2000122, y: 16.899994}
   m_SizeDelta: {x: 4000, y: 6000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &549025090101294579
@@ -125,6 +125,7 @@ MonoBehaviour:
   - {fileID: 8714678973583173938}
   healthBarImage: {fileID: 7048254358056704764}
   helthStatus: {fileID: 3565032417309079957}
+  sellValue: {fileID: 1016333454353332765}
 --- !u!1 &2033634153660375795
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,7 +137,7 @@ GameObject:
   - component: {fileID: 5138486460893920185}
   - component: {fileID: 4113863539907500894}
   - component: {fileID: 2839671674757237714}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 202.2}
+  m_AnchoredPosition: {x: 0, y: 414.14}
   m_SizeDelta: {x: 800, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4113863539907500894
@@ -212,7 +213,7 @@ GameObject:
   - component: {fileID: 1173216076120508546}
   - component: {fileID: 5715824158317079285}
   - component: {fileID: 7048254358056704764}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,9 +284,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 818043568375820754}
     m_Modifications:
+    - target: {fileID: 802450487276853302, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 866229803947538908, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1143751771530004819, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
       propertyPath: m_Name
       value: AnimalStatus
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143751771530004819, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2357104996742043084, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991291953604675475, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5266025673377699675, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -375,6 +396,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7681023080617558716, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7793467657694737439, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942638745487772278, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8030321381762073321, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053672383291422429, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549538657797696901, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727483891318982768, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6588030237484228654}
+    - target: {fileID: 8727483891318982768, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SellButtonPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727483891318982768, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GUIPerPet, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727483891318982768, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
 --- !u!1 &3769788311578117019 stripped
@@ -423,6 +484,17 @@ MonoBehaviour:
 --- !u!114 &8714678973583173938 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4863698518146032634, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
+  m_PrefabInstance: {fileID: 4291814249431141064}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1016333454353332765 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3861040318293930197, guid: c99e6478caa2da64383f9abcb006af21, type: 3}
   m_PrefabInstance: {fileID: 4291814249431141064}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

@@ -22,6 +22,7 @@ public class GUIPerPet : MonoBehaviour
     }
     private void OnEnable()
     {
+        sellValue.text = animHandle.ValueEachAges[(int)animHandle.AniAge].ToString() + "G";
         HealthBar.SetActive(true);
         StatusPanel.SetActive(false);
         animHandle.HealbarAction += HandleHealtBarNormal;
@@ -45,6 +46,7 @@ public class GUIPerPet : MonoBehaviour
         helthStatus.DOFillAmount(animHandle.GetCurrentHealt(), 0.1f);
         TextList[2].text = animHandle.CurrentHeath.ToString() + "/" + animHandle.MaxHealth.ToString();
         TextList[1].text = "Status: " + animHandle.AniAge.ToString();
+        sellValue.text = animHandle.ValueEachAges[(int)animHandle.AniAge].ToString() + "G";
     }
     private void Update()
     {
@@ -59,6 +61,13 @@ public class GUIPerPet : MonoBehaviour
         UpdateStatus();
 
     }
+    [SerializeField] TextMeshProUGUI sellValue;
+    public void SellButtonPressed()
+    {
+        PlayerController.Instance.UpDateGold(-animHandle.ValueEachAges[(int)animHandle.AniAge]);
+        animHandle.DeathAction();
+    }
+   
     private void OnDisable()
     {
         healthBarImage.DOKill();

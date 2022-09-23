@@ -1183,20 +1183,21 @@ MonoBehaviour:
   foodEatable: 0300000001000000
   baseSpeed: 3
   foodAbSpeed: 2
-  MaxHealth: 60
+  MaxHealth: 62
   TimeToEat: 1
   stopDistances: 0.1
   mainCamera: {fileID: 0}
   guionThispet: {fileID: 1559185762460981020}
   CurrentHeath: 0
   TimeToDevEachAge:
-  - 20
-  - 10
+  - 25
+  - 30
   SizeEachAge:
   - 0.09
   - 0.14
   - 0.18
-  ValueEachAges: 320000002c010000bc020000
+  ValueEachAges: 640000005e01000020030000
+  BuyPrice: 300
 --- !u!65 &5788681621964708372
 BoxCollider:
   m_ObjectHideFlags: 0

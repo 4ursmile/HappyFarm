@@ -5,6 +5,7 @@ using UnityEngine;
 public class AnimalManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> animalPreList;
+    
     public static AnimalManager Instance;
     private void Awake()
     {
@@ -23,7 +24,12 @@ public class AnimalManager : MonoBehaviour
     }
     public void BuyAnimal(int type)
     {
-        SpawnAnimal(type);
+        if (PlayerController.Instance.CurrentGold > animalPreList[type].GetComponent<AnimalBase>().BuyPrice)
+        {
+            PlayerController.Instance.UpDateGold(animalPreList[type].GetComponent<AnimalBase>().BuyPrice);
+            SpawnAnimal(type);
+        }
+
     }
     void SpawnAnimal(int type)
     {

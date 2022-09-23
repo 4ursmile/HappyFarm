@@ -147,7 +147,8 @@ public abstract class AnimalBase : MonoBehaviour, Iselectable
             yield return new WaitForSeconds(1);
             CurrentHeath--;
             HealbarAction?.Invoke();
-            
+            PlayerController.Instance.UpDateGold(1);
+
         }
         DeathAction();
         yield return null;
@@ -190,7 +191,7 @@ public abstract class AnimalBase : MonoBehaviour, Iselectable
     {
         Debug.Log(animalName);
     }
-    void DeathAction()
+    public void DeathAction()
     {
         animator.SetTrigger("Death");
         this.DeSelect();
@@ -199,7 +200,8 @@ public abstract class AnimalBase : MonoBehaviour, Iselectable
         Destroy(guionThispet.gameObject, 1);
 
     }
-    [SerializeField] List<int> ValueEachAges;
+    [SerializeField] public List<int> ValueEachAges;
+    public int BuyPrice;
 }
 public enum AnimalType
 {

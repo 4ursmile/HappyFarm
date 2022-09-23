@@ -42,6 +42,6 @@ public class AnimalShopUI : MonoBehaviour
     {
         uiElements[3].SetActive(true);
         uiElements[2].SetActive(false);
-
     }
+    
 }

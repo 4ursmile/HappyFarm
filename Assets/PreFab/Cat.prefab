@@ -425,20 +425,21 @@ MonoBehaviour:
   foodEatable: 0100000002000000
   baseSpeed: 3
   foodAbSpeed: 2
-  MaxHealth: 55
+  MaxHealth: 60
   TimeToEat: 2
   stopDistances: 0.1
   mainCamera: {fileID: 0}
   guionThispet: {fileID: 646786837884423156}
   CurrentHeath: 10
   TimeToDevEachAge:
-  - 17
-  - 28
+  - 20
+  - 27
   SizeEachAge:
   - 0.09
   - 0.14
   - 0.18
-  ValueEachAges: 640000002c01000058020000
+  ValueEachAges: 6400000090010000bc020000
+  BuyPrice: 400
 --- !u!1 &2216743510510317521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,6 +1292,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4603164704725570372, guid: 29861bceed5d8354a8065d2be9bc7593, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796850415596372664, guid: 29861bceed5d8354a8065d2be9bc7593, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 646786837884423156}
     - target: {fileID: 6588030237484228654, guid: 29861bceed5d8354a8065d2be9bc7593, type: 3}
       propertyPath: UIHandle
       value: 
