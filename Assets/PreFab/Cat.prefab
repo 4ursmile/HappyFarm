@@ -438,6 +438,7 @@ MonoBehaviour:
   - 0.09
   - 0.14
   - 0.18
+  ValueEachAges: 640000002c01000058020000
 --- !u!1 &2216743510510317521
 GameObject:
   m_ObjectHideFlags: 0

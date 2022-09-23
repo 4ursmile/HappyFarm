@@ -198,9 +198,8 @@ public abstract class AnimalBase : MonoBehaviour, Iselectable
         Destroy(gameObject,1);
         Destroy(guionThispet.gameObject, 1);
 
-
-
     }
+    [SerializeField] List<int> ValueEachAges;
 }
 public enum AnimalType
 {

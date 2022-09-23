@@ -737,7 +737,7 @@ MonoBehaviour:
   foodAbSpeed: 2
   MaxHealth: 70
   TimeToEat: 1
-  stopDistances: 0
+  stopDistances: 0.1
   mainCamera: {fileID: 0}
   guionThispet: {fileID: 3905910871279705838}
   CurrentHeath: 0
@@ -748,6 +748,7 @@ MonoBehaviour:
   - 0.09
   - 0.14
   - 0.18
+  ValueEachAges: 64000000c800000058020000
 --- !u!1 &653954921942321778
 GameObject:
   m_ObjectHideFlags: 0

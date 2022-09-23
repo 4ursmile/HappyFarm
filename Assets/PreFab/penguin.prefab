@@ -1180,12 +1180,12 @@ MonoBehaviour:
   animalName: Peguin
   animalDescription: A Peguin but not live in NorthPole
   AniAge: 0
-  foodEatable: 020000000300000001000000
+  foodEatable: 0300000001000000
   baseSpeed: 3
   foodAbSpeed: 2
   MaxHealth: 60
   TimeToEat: 1
-  stopDistances: 0
+  stopDistances: 0.1
   mainCamera: {fileID: 0}
   guionThispet: {fileID: 1559185762460981020}
   CurrentHeath: 0
@@ -1196,6 +1196,7 @@ MonoBehaviour:
   - 0.09
   - 0.14
   - 0.18
+  ValueEachAges: 320000002c010000bc020000
 --- !u!65 &5788681621964708372
 BoxCollider:
   m_ObjectHideFlags: 0
