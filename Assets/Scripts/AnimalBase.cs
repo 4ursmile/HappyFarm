@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(NavMeshAgent))]
@@ -17,14 +18,17 @@ public abstract class AnimalBase : MonoBehaviour, Iselectable
     public List<FoodType> foodEatable;
     [SerializeField] float baseSpeed = 3;
     [SerializeField] float foodAbSpeed = 2;
-    [SerializeField] private int MaxHealth;
+    [SerializeField] public int MaxHealth;
     [SerializeField] float TimeToEat;
     [SerializeField] float stopDistances;
     [SerializeField] Camera mainCamera;
+    [SerializeField] GUIPerPet guionThispet;
     Animator animator;
     AnimaStatus status;
     bool isSelect;
     public int CurrentHeath;
+    public delegate void ActionHealthBar();
+    public ActionHealthBar HealbarAction;
     public void Awake()
     {
         animator = GetComponent<Animator>();
@@ -38,11 +42,14 @@ public abstract class AnimalBase : MonoBehaviour, Iselectable
         int Age = 0;
         status = AnimaStatus.MoveAround;
         transform.DOScale(new Vector3(SizeEachAge[Age], SizeEachAge[Age], SizeEachAge[Age]),1);
-
+        CurrentHeath = MaxHealth;
         StartCoroutine(HealthReduceOverTime());
         StartCoroutine(TimeToDev());
     }
-
+    public float GetCurrentHealt()
+    {
+        return (float)CurrentHeath / (float)MaxHealth;
+    }
     bool isMoving = false;
     private void Update()
     {
@@ -76,12 +83,14 @@ public abstract class AnimalBase : MonoBehaviour, Iselectable
         PlayerController.Instance.selectbleAction += HandleSelected;
         DownArrowUIHandle.Instance.SetUIArrow(transform);
         isSelect = true;
+        guionThispet.SelectPetAction();
         HandleStopMoving();
     }
     public void DeSelect()
     {
         PlayerController.Instance.selectbleAction -= HandleSelected;
         isSelect = false;
+        guionThispet.DeSelectPetAction();
         status = AnimaStatus.MoveAround;
     }
     protected virtual void HandleSelected()
@@ -97,7 +106,6 @@ public abstract class AnimalBase : MonoBehaviour, Iselectable
     }
     void CastAction()
     {
-        Debug.Log("Im moving");
         RaycastHit hit;
         Ray inputRay = mainCamera.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(inputRay, out hit, Mathf.Infinity))
@@ -138,8 +146,10 @@ public abstract class AnimalBase : MonoBehaviour, Iselectable
         {
             yield return new WaitForSeconds(1);
             CurrentHeath--;
+            HealbarAction?.Invoke();
             
         }
+        DeathAction();
         yield return null;
     }
     [SerializeField]
@@ -183,8 +193,13 @@ public abstract class AnimalBase : MonoBehaviour, Iselectable
     void DeathAction()
     {
         animator.SetTrigger("Death");
+        this.DeSelect();
+        PlayerController.Instance.iselectables.Remove(this);
         Destroy(gameObject,1);
-        
+        Destroy(guionThispet.gameObject, 1);
+
+
+
     }
 }
 public enum AnimalType

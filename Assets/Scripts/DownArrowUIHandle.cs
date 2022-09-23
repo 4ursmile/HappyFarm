@@ -38,6 +38,8 @@ public class DownArrowUIHandle : MonoBehaviour
     public void DeActive()
     {
         isFirst = true;
+        TransFormSelect = null;
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame

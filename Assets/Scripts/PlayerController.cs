@@ -43,4 +43,12 @@ public class PlayerController : MonoBehaviour
             hit.collider.gameObject.GetComponent<Iselectable>().Select();
         }
     }
+    public void DeselectAll()
+    {
+        foreach (var item in iselectables)
+        {
+            item.DeSelect();
+        }
+        DownArrowUIHandle.Instance.DeActive();
+    }
 }
